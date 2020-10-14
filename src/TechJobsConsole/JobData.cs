@@ -50,13 +50,13 @@ namespace TechJobsConsole
                 {
                     string aValue = row[result].ToLower();
 
-                    if (aValue.Contains(value))
+                    if (aValue.Contains(value.ToLower()))
                     {
                         jobs.Add(row);
                     }
-                }
-                return jobs;
+                }                
             }
+            return jobs;
         }
 
         public static List<Dictionary<string, string>> FindByColumnAndValue(string column, string value)
@@ -70,7 +70,7 @@ namespace TechJobsConsole
             {
                 string aValue = row[column].ToLower();
 
-                if (aValue.Contains(value))
+                if (aValue.Contains(value.ToLower()))
                 {
                     jobs.Add(row);
                 }
